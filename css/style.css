@@ -370,6 +370,7 @@ main .title {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .messengers-link:hover,
@@ -453,7 +454,6 @@ main .title {
 
 /* FOOTER */
 .footer-content {
-  align-items: baseline;
   margin-right: 120px;
 }
 .footer-content .logo {
@@ -476,14 +476,20 @@ footer .logo-web-color {
 
 .footer .container {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-media {
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
 
-.media-text {
+.footer-media .messengers-list {
+  gap: 16px;
+}
+
+.footer-media .media-text {
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -494,4 +500,9 @@ footer .logo-web-color {
   color: #f4f4fd;
   letter-spacing: 0.02em;
   max-width: 264px;
+}
+
+.footer .messengers-link:hover,
+.footer .messengers-link:focus {
+  background-color: #31d0aa;
 }
